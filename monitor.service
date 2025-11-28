@@ -1,0 +1,10 @@
+[Unit]
+Description=App Monitor Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 opt/myapp/monitoring_script.py --app-path=opt/myapp/hello_world_app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
